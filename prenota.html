@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="it">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-sccale=1.0">
+	<title>Antica Osteria- Sapori della tradizione</title>
+	<link rel="stylesheet" href="style.css">
+	
+  </head>
+
+  <body>
+	<!-- 1.NAVIGAZIONE -->
+	<header class="main-header">
+		<div class="logo">Antica Osteria</div>
+		<nav>
+			<ul>
+				<li><a href="index.html"class="active">Home</a></li>
+				<li><a href="menu.html">Il menu</a></li>
+				<li><a href="contatti.html">Contatti</a></li>	
+			</ul>	
+
+		</nav>
+		
+	</header>
+	
+	
+	<!-- 5.PRENOTAZIONE TAVOLO -->
+	<section class="bookign-section" id="prenota">
+		<div class="booking-container">
+			<h2>Riserva il Tuo Tavolo</h2>
+			<p class="booking-subtitle">Vivi un'esperienza culinaria nel cuore della tradizione. Ti consigliamo di prenotare in anticipo.</p>
+
+			<form class="booking-form" action="#" method="POST">
+				<div class="form-group">
+					<label for="fullname">Nome e Cognome</label>
+					<input type="text" id="fullname" name="fullname" placeholder="Es. Mario Rossi" required>
+				</div>
+				<div class="form-row">
+					<div class="form-group">
+						<label for="guest">Numero di ospiti</label>
+						<input type="number" id="guests" name="guests" min="1" max="20" value="2" required>	
+					</div>
+					<div class="form-group">
+						<label for="phone>Telefono</label>
+						<input type="tel" id="phone" name="phone" placholer="Es. 333 1234567 required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group">
+						<label for="date">Data</label>
+						<input type="date" id="date" name="date" required>
+					</div>
+					<div class="form-group">
+						<label for="time">Orario</label>
+						<input type="time" id="time" name"time" min="12:00" max="23:00" required>
+	
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="notes">Note Speciali (Allergie, Intolleranze, seggioloni)</label>
+					<textarea id="notes" name="notes" rows="4" placeholder="Segnala qui eventuali esigenze particolari..."></textarea>
+				</div>
+				
+				<button type="submit" class="btn-book">Invia Richiesta</button>
+
+				
+			</form>
+		</div>
+	</section>
+      
+  </body>
+
+</html>

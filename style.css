@@ -1,0 +1,374 @@
+@import url('https://googleapis.com');
+
+body{
+	font-family: 'lora', serif;
+	backgound-color: #FFFDF9;
+	color: #2C1E11;
+}
+
+h1, h2, h3{
+	font-family: 'italiana', serif;
+	color: #8B82617;
+	font-weight: normal;
+}
+
+/*---STILI GENERALI---*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: boder-box;
+
+}
+
+
+
+
+
+/*---MENU---*/
+/* Griglia principale responsive */
+
+.menu-grid{
+	dispaly: grid;
+	grid-template-columns: repat(auto-fit, minmax (300px, 1fr))
+	gap: 30px;
+	padding: 20px 0;
+} 
+
+/*Card del singolo piatto in stile osteria */
+
+.menu-item{
+	background-color: #FAF4EB; /*sfondo leggermente più scuro della pagina */
+	border: 2px double #D4B28C; /*doppio bordo color corda/legno */
+	padding 20px;
+	border-radius: 4px; /*Angoli appena smussati*/
+	box-shadow: 0 4px 6px rgba(44, 30, 17, 0.05);/*Ombra caldissima e leggera*/
+	transition: transform 0.3s ease;
+}
+
+.menu-time:hover{
+	transform: translateY(-3px); /*Effetto sollevamento al passaggio del mouse*/
+}
+
+
+
+.item-header {
+	dipspaly: flex;
+	justifiy-content: space-between;
+	align-items: baseline;
+}
+
+.Item-header h3{
+	margin: 0;
+	color: #2C3E50;
+	font-size: 1.2rem;
+}
+
+.price{
+	font-weight: bold;
+	color: #E74C3C;
+}
+
+.description{
+	font-style: italic;
+	color: #7F8C8D;
+	margin-top: 5px;
+	font-size: 0.95 rem;
+
+}
+/*---NAVIGAZIONE---*/
+.main-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5%;
+	backgound-color: #FFFDF9;
+	border-bottom: 1px solid #D4B28C;
+	position: sticky;
+	top: o;
+	z-index: 1000;	
+
+}
+
+.logo{
+	font-family: 'Italiana'. serif;
+	font-size: 1.8rem;
+	color: #8B2617;
+
+}
+
+nav ul{
+	display: flex;
+	list-style: none;
+	gap: 25px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #2C1E11;
+	font-weight: 600;
+	font-size: 0.92rem;
+	transition color: 0.3s;
+
+}
+
+nav ul li a:hover
+nav ul li a.active{
+	color: #8B2617;
+}
+
+/*---SEZIONE HERO---*/
+.hero-section{
+	position: relative;
+	height: 80hv;
+	background-image: url('https://images.unsplash.com/photo-1652195960911-c9f55224bd89?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	background-size: cover;
+	background-position: center;
+	dispaly: flex;
+	align-items: center;	
+	justify-content: center;
+	text-align: center;
+}
+
+.hero-overlay{
+	postion: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba (44, 30, 17, 0.5); /*Scura l'immagine del 50%*/
+	z-index: 1;
+}
+
+.hero-content{
+	postion: relative;
+	z-index: 2;
+	color: #FFFDF9;
+	padding: 0 20px;
+	max.width: 800px;
+}
+
+.hero-content h1{
+	font-size: 3.5rem;
+	color: #FFFDF9;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p{
+	font-size: 1.3rem;
+	margin-botttom: 30px;
+}
+
+.btn-hero{
+	dipsplay: inline-block;
+	background-color: #8B2617;
+	color: #FFFDF9;
+	padding: 15px 35px;
+	text-decoration: none;
+	font-family: 'Italiana', serif;
+	font-size: 1.1rem;
+	text-transformation: uppercase;
+	letter-spacing: 1px;
+	border: 1px solid #721C10;
+	transition: background-color: 0.3s;
+}
+
+.btn-hero:hover{
+	background-color: #FFFDF9;
+	color: #8B2617;
+}
+
+/*---INTRODUZIONE /CHI SIAMO---*/
+.intro-section{
+	padding: 80px;
+	background-color: #FFFDF9;
+	text-align: center;
+}
+.intro-container{
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.intro-section h2{
+	font-size: 2.5rem;
+	margin-bottom: 15px;
+}
+
+.cursive-text{
+	font-style: italic;
+	color: #7F8C8D;
+	margin-bottom: 25px;
+	font-size: 1.1rem;
+}
+
+.intro-container p:last-child{
+	line-height: 1.8;
+	font-size: 1.05rem;
+}
+
+/*---SEZIONE INFO---*/
+.info-section{
+	background-color: #FAF4EB;
+	padding: 40px 20px;
+	border-top: 1px: solid #D4B28C;
+	border-bottom: 1px solid #D4B28C;
+	text-align: center;
+}
+
+.info-box h3{
+	margin-bottom: 10px;
+	font-size: 1.5rem;
+	
+}
+
+.info-box p{
+	line-height: 1.6;
+}	
+
+
+
+/*---MODULO PRENOTAZIONE TAVOLO---*/
+/*contenitore della sezione*/
+
+.booking-section{
+	padding: 60px 20px;
+	background-color: #FFDF9;
+	display: flex;
+	justify-content: center;	
+}
+
+.booking-container{
+	max-width: 600px;
+	width: 100%;
+	background-color: #FAF4EB; /*Sfondo carta pergamena */
+	border: 2px double #D4B28C; /* doppio bordo stile classico */
+	padding: 40px;
+	box-shadow: 0 10px 20px rgba(44, 30 ,17, 0.05);
+	text-align: center;
+}
+
+booking-subtitle{
+	font-style: italic;
+	color: #7F8C8D;
+	marign-bottom: 30px;
+}
+
+/*Struttura del modulo*/
+.booking-form{
+	text-align: left;
+
+}
+
+.form-group{
+	margin-bottom: 20px;
+
+}
+
+.form-row{
+	display: flex;
+	gap: 20px;
+
+}
+
+.form-row .form-group{
+	flex: 1;
+
+}
+
+/*Etichette e campi di input*/
+
+.booking-form label{
+	display: block;
+	font-family: 'lora', serif;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #2C1E11;
+	font-size: 0.92 rem;
+}
+
+.booking-form input,
+.booking-form textarea{
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #D4B28C;
+	background-color: #FFFDF9;
+	font-family: 'lora', serif;
+	color: #2C1E11;
+	font-size: 1rem;
+	box-sizing: border-box;
+}
+
+/*Effetto quando il cliente clicca sul campo */
+.booking-form input:focus,
+.booking-form textarea: focus{
+	outline: none;
+	border-color: #8B2617; /*Evidenziato in rosso mattone*/
+	box-shadow: 0 0 5px rgba(139, 38, 23, 0.2)
+}
+
+
+/*pulsante di prenotazione rustico */
+.btn-book{
+	backgound-color:#8B2617; /*rosso mattone*/
+	color: #FFFDF9;
+	padding: 12px 28px;
+	font-family: 'Italiana', serif;
+	font-size: 1.2 rem;
+	border: 1px solid #721C10;
+	cursor: pointer;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.btn-book:hover{
+	background-color: #2C1E11; /*diventa marrone*/
+	color: #FFFDF9;
+}
+
+/* Regole per smartphone (schermi sotto i 768px) */
+
+@media (max-width 768px){
+	-hero-section{
+		height: 60vh; /* riduce l'altezza dell'immagine principale */
+	
+	}
+	
+	nav ul{
+		flex-direciton: colum; /* Trasforma il menu orizzonale in verticale
+		text-align: center;
+	}
+
+	nav ul li{
+		margin: 10px 0;
+	
+	}
+
+	.main-header{
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.hero-content h1{
+		font-size: 2.2rem;
+	}
+	
+	.hero-content p{
+		font.size: 1.1rem;
+	}		
+
+
+}
+
+@media (max-width: 480px){
+	.form-row{
+		flex-direction: column;
+		gap: 0;
+	
+	}
+
+	.booking-container{
+		padding: 20px;
+	}
+
+}
